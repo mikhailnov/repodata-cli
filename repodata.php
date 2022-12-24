@@ -91,7 +91,7 @@ function _sql_get_package_version(string $file, string $package)
 function _get_package_version(string $repomd, string $package)
 {
 	/* Here memory usage is x2 of sqlite DB size because
-	 * we first store an auncompressed DB in memory and then
+	 * we first store an uncompressed DB in memory and then
 	 * write in into a temporary file, ususually in tmpfs.
 	 * It can be reduced later if needed by decompressing *.sqlite.bz2
 	 * into a temp file directly. */
