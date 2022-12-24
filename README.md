@@ -24,3 +24,9 @@ Usage:
 * php-bz2
 * php-sqlite3
 * php-xmlreader
+
+## Installation on ROSA Linux / Установка на ROSA Linux
+
+`sudo dnf install repodata-cli`
+
+`repodata-cli get-package-version path/to/repomd.xml package-name`
