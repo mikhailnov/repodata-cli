@@ -2,12 +2,11 @@
 
 <?php
 
-function _echo_help(string $argv0, int $exit_code)
+function _echo_help(string $argv0)
 {
 	echo "Usage: " . $argv0 . " get-package-version path/to/repomd.xml package-name" . PHP_EOL;
 	echo "Example: " . $argv0 . " get-package-version test-repo/repodata/repomd.xml dos2unix" . PHP_EOL;
 	echo "Package version will be printined to stdout." . PHP_EOL;
-	exit($exit_code);
 }
 
 function _get_db_path(string $file)
@@ -157,11 +156,11 @@ switch ($argv1) {
 		fprintf(STDOUT, $version . PHP_EOL);
 		break;
 	case 'help':
-		_echo_help($argv[0], 0);
+		_echo_help($argv[0]);
 		exit(0);
 		break;
 	default:
-		_echo_help($argv[0], 1);
+		_echo_help($argv[0]);
 		exit(1);
 		break;
 };
